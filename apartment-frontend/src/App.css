@@ -1,0 +1,353 @@
+/* 🌤️ General App Styling */
+
+body {
+    background-color: #f4f7fc;
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 🌈 Azure Gradient Navbar */
+
+.navbar {
+    background: linear-gradient(90deg, #0078d7, #005ea3);
+    color: white;
+    padding: 18px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* 🧭 Navbar Links */
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+
+/* ✨ Hover underline animation */
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+
+/* 🎯 Active Link Highlight */
+
+.navbar a.active {
+    border-bottom: 2px solid white;
+}
+
+
+/* 🏠 Navbar Icon (First Link) */
+
+.navbar a:first-child {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+
+/* 🧱 Card Container (used in all pages) */
+
+.card {
+    background: white;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+/* 🧾 Form Styling (Add/Edit/Complaint Forms) */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+    margin-top: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0078d7;
+    box-shadow: 0 0 5px rgba(0, 120, 215, 0.3);
+}
+
+
+/* ✨ General Button Styling */
+
+button {
+    background: #0078d7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 12px;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: #005ea3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* 🟢 Save Button */
+
+.save-btn {
+    background: #28a745;
+}
+
+.save-btn:hover {
+    background: #1e7e34;
+}
+
+
+/* 🟠 Edit Button */
+
+.edit-btn {
+    background: #f39c12;
+    margin-left: 8px;
+}
+
+.edit-btn:hover {
+    background: #d68910;
+}
+
+
+/* 🔴 Delete Button */
+
+.delete {
+    background: #e74c3c;
+}
+
+.delete:hover {
+    background: #c0392b;
+}
+
+
+/* 🧩 Actions Container (Buttons below each apartment) */
+
+.actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* 🏢 Apartment List Layout */
+
+.apartment-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+
+/* 🏠 Each Apartment Card */
+
+.apartment-item {
+    width: 90%;
+    max-width: 500px;
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.apartment-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* 🧍 Apartment Title */
+
+.apartment-item strong {
+    color: #0078d7;
+    font-size: 18px;
+}
+
+
+/* 🧭 Apartment Text Lines */
+
+.apartment-item p {
+    margin: 6px 0;
+}
+
+
+/* 🧍 Empty List Message */
+
+.empty {
+    text-align: center;
+    font-size: 18px;
+    color: gray;
+    margin-top: 40px;
+}
+
+
+/* 💎 Responsive Tweaks */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 14px 0;
+    }
+    .card {
+        width: 95%;
+        padding: 20px;
+    }
+    .apartment-item {
+        font-size: 15px;
+        padding: 20px;
+    }
+    button {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+}
+
+
+/* 🧾 Complaint Form Styling */
+
+.complaint-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.complaint-form input,
+.complaint-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.complaint-form input:focus,
+.complaint-form textarea:focus {
+    border-color: #0078d7;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 120, 215, 0.3);
+}
+
+.complaint-form button {
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.complaint-form button:hover {
+    background-color: #005ea3;
+}
+
+
+/* 📋 Complaint List */
+
+.complaint-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.complaint-list li {
+    background: #f7f9fc;
+    border-left: 5px solid #0078d7;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Dashboard Info Cards */
+
+.info-card {
+    background: #f8fbff;
+    border-left: 5px solid #0078d7;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card h3 {
+    color: #0078d7;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.info-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}

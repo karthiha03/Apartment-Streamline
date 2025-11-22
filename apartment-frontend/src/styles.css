@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional tiny extra utilities for app layout */
+
+body {
+    @apply bg-gray-50 text-gray-800;
+}
