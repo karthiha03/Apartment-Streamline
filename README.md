@@ -3,25 +3,27 @@
 A full-stack Apartment Management System built using React (frontend) and Spring Boot (backend).
 This project helps apartment admins manage apartments, rent details, complaints, and reviews in a simple web interface.
 
-🚀 Tech Stack
-Frontend
-React JS
-Tailwind CSS
-Axios (API calls)
+🚀 Tech Stack--
+Frontend-
 
-Backend
-Spring Boot
-Java
-MySQL
-JPA / Hibernate
+React JS|
+Tailwind CSS|
+Axios (API calls)|
 
-📌 Features
-Add, Edit, Delete Apartment Details
-View Apartment List
-Manage Rent Information
-Register Complaints
-Dashboard Overview
-Review Section
+Backend-
+
+Spring Boot|
+Java|
+MySQL|
+JPA / Hibernate|
+
+📌 Features-
+Add, Edit, Delete Apartment Details |
+View Apartment List |
+Manage Rent Information |
+Register Complaints |
+Dashboard Overview |
+Review Section |
 Clean Navigation (Navbar)
 
 📂 Project Structure
